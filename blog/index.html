@@ -1,0 +1,97 @@
+---
+layout: default
+title: "Блог"
+description: "Полезные статьи о копирайтинге, маркетинге и продажах. Практические советы для повышения эффективности текстов."
+---
+
+<!-- Header Section -->
+<section class="section">
+    <div class="container text-center">
+        <h1>Блог</h1>
+        <p class="hero-subtitle">
+            Полезные статьи о копирайтинге, маркетинге и продажах. Практические советы для повышения эффективности текстов.
+        </p>
+    </div>
+</section>
+
+<!-- Blog Posts Grid -->
+<section class="section">
+    <div class="container">
+        <div class="grid grid-3">
+            {% for post in paginator.posts %}
+            <article class="card blog-card">
+                <div class="blog-meta">
+                    <span class="blog-category">{{ post.category }}</span>
+                    <span class="blog-date">{{ post.date | date: "%d.%m.%Y" }}</span>
+                </div>
+                
+                <h2 class="blog-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h2>
+                
+                <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                
+                <div class="blog-footer">
+                    <div class="blog-tags">
+                        {% for tag in post.tags limit:3 %}
+                        <span class="badge">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="blog-read-info">
+                        <span class="read-time">{{ post.read_time | default: "5 мин" }}</span>
+                        <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-secondary">
+                            Читать
+                        </a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        
+        <!-- Pagination -->
+        {% if paginator.total_pages > 1 %}
+        <div class="pagination-wrapper">
+            <nav class="pagination">
+                {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | relative_url }}" class="btn btn-secondary">
+                    ← Предыдущая
+                </a>
+                {% endif %}
+                
+                <div class="pagination-info">
+                    Страница {{ paginator.page }} из {{ paginator.total_pages }}
+                </div>
+                
+                {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | relative_url }}" class="btn btn-secondary">
+                    Следующая →
+                </a>
+                {% endif %}
+            </nav>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Newsletter Signup -->
+<section class="section" style="background-color: var(--muted);">
+    <div class="container text-center">
+        <h2>Получайте новые статьи первыми</h2>
+        <p class="hero-subtitle">
+            Подпишитесь на рассылку и получайте полезные материалы о копирайтинге прямо на почту
+        </p>
+        
+        <div class="newsletter-form">
+            <form action="#" method="POST" class="newsletter-signup">
+                <input type="email" placeholder="Ваш email" required>
+                <button type="submit" class="btn btn-primary">
+                    Подписаться
+                </button>
+            </form>
+            <p class="newsletter-disclaimer">
+                Никакого спама, только полезный контент
+            </p>
+        </div>
+    </div>
+</section>
