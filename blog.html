@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог - Профессиональный копирайтер</title>
+    <meta name="description" content="Полезные статьи о копирайтинге, контент-маркетинге и продающих текстах. Советы и кейсы от практикующего копирайтера.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo">Копирайтер</a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="services.html" class="nav-link">Услуги</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Портфолио</a></li>
+                    <li><a href="blog.html" class="nav-link">Блог</a></li>
+                    <li><a href="about.html" class="nav-link">Обо мне</a></li>
+                    <li><a href="contact.html" class="nav-link">Контакты</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" id="mobileToggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in-up">
+                <h1>Блог о копирайтинге</h1>
+                <p class="hero-description">
+                    Полезные статьи, кейсы и советы о том, как создавать тексты, которые продают. 
+                    Делюсь опытом и секретами профессии.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="section">
+        <div class="container">
+            <div class="featured-article">
+                <div class="card" style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); color: white; padding: 3rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Рекомендуем</span>
+                        <span style="opacity: 0.8;">20 декабря 2024</span>
+                    </div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem; line-height: 1.2;">Как написать продающий заголовок: 5 проверенных формул</h2>
+                    <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">Заголовок решает 80% успеха текста. В этой статье разбираю 5 формул, которые помогут создать заголовки, привлекающие внимание и мотивирующие читать дальше.</p>
+                    <a href="#" class="btn" style="background: white; color: var(--accent-primary); border: none;">Читать статью</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Articles -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Все статьи</h2>
+            
+            <!-- Added category filter buttons -->
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all">Все статьи</button>
+                <button class="category-btn" data-category="copywriting">Копирайтинг</button>
+                <button class="category-btn" data-category="seo">SEO</button>
+                <button class="category-btn" data-category="marketing">Маркетинг</button>
+                <button class="category-btn" data-category="psychology">Психология</button>
+                <button class="category-btn" data-category="testing">Тестирование</button>
+            </div>
+
+            <div class="grid grid-3" id="articlesGrid">
+                <!-- Added data-category attributes to articles -->
+                <article class="card fade-in-up" data-category="psychology">
+                    <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">18 декабря 2024</div>
+                    <h3><a href="blog-post.html" style="color: inherit; text-decoration: none;">Психология продающих текстов</a></h3>
+                    <p>Как использовать принципы психологии влияния для создания текстов, которые мотивируют к покупке. Разбираем 6 основных триггеров.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="blog-post.html" class="btn btn-outline">Читать</a>
+                    </div>
+                </article>
+
+                <article class="card fade-in-up" data-category="seo">
+                    <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">15 декабря 2024</div>
+                    <h3><a href="blog-post.html" style="color: inherit; text-decoration: none;">SEO-копирайтинг в 2024</a></h3>
+                    <p>Современные подходы к созданию SEO-текстов, которые нравятся и людям, и поисковым системам. Что изменилось за последний год.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="blog-post.html" class="btn btn-outline">Читать</a>
+                    </div>
+                </article>
+
+                <article class="card fade-in-up" data-category="copywriting">
+                    <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">12 декабря 2024</div>
+                    <h3><a href="blog-post.html" style="color: inherit; text-decoration: none;">Структура продающего лендинга</a></h3>
+                    <p>Пошаговый разбор структуры лендинга, который конвертирует. От заголовка до формы заказа - все элементы успешной страницы.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="blog-post.html" class="btn btn-outline">Читать</a>
+                    </div>
+                </article>
+
+                <article class="card fade-in-up" data-category="psychology">
+                    <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">10 декабря 2024</div>
+                    <h3><a href="blog-post.html" style="color: inherit; text-decoration: none;">Работа с возражениями в тексте</a></h3>
+                    <p>Как предугадать возражения клиентов и закрыть их в тексте. Техники и примеры из реальных проектов.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="blog-post.html" class="btn btn-outline">Читать</a>
+                    </div>
+                </article>
+
+                <article class="card fade-in-up" data-category="copywriting">
+                    <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">8 декабря 2024</div>
+                    <h3><a href="blog-post.html" style="color: inherit; text-decoration: none;">Призывы к действию: что работает</a></h3>
+                    <p>Анализ эффективности различных CTA. Какие фразы мотивируют к действию, а какие отталкивают клиентов.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="blog-post.html" class="btn btn-outline">Читать</a>
+                    </div>
+                </article>
+
+                <article class="card fade-in-up" data-category="marketing">
+                    <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">5 декабря 2024</div>
+                    <h3><a href="blog-post.html" style="color: inherit; text-decoration: none;">Контент-маркетинг для B2B</a></h3>
+                    <p>Особенности создания контента для B2B-сегмента. Как говорить с бизнес-аудиторией и какие форматы работают лучше всего.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="blog-post.html" class="btn btn-outline">Читать</a>
+                    </div>
+                </article>
+
+                <article class="card fade-in-up" data-category="psychology">
+                    <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">3 декабря 2024</div>
+                    <h3><a href="blog-post.html" style="color: inherit; text-decoration: none;">Эмоции в коммерческих текстах</a></h3>
+                    <p>Как использовать эмоциональные триггеры в продающих текстах. Баланс между рациональностью и эмоциями.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="blog-post.html" class="btn btn-outline">Читать</a>
+                    </div>
+                </article>
+
+                <article class="card fade-in-up" data-category="testing">
+                    <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">1 декабря 2024</div>
+                    <h3><a href="blog-post.html" style="color: inherit; text-decoration: none;">Тестирование текстов: A/B тесты</a></h3>
+                    <p>Как правильно тестировать тексты и интерпретировать результаты. Методология и инструменты для A/B тестирования.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="blog-post.html" class="btn btn-outline">Читать</a>
+                    </div>
+                </article>
+
+                <article class="card fade-in-up" data-category="marketing">
+                    <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">28 ноября 2024</div>
+                    <h3><a href="blog-post.html" style="color: inherit; text-decoration: none;">Персонализация в email-маркетинге</a></h3>
+                    <p>Как создавать персонализированные email-рассылки, которые открывают и читают. Сегментация и автоматизация.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="blog-post.html" class="btn btn-outline">Читать</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="btn btn-outline" disabled>← Предыдущая</button>
+                <div class="pagination-numbers">
+                    <button class="btn btn-primary">1</button>
+                    <button class="btn btn-outline">2</button>
+                    <button class="btn btn-outline">3</button>
+                </div>
+                <button class="btn btn-outline">Следующая →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section" style="background: var(--card-bg);">
+        <div class="container">
+            <div class="text-center">
+                <h2>Подписаться на рассылку</h2>
+                <p style="max-width: 600px; margin: 0 auto 2rem;">
+                    Получайте новые статьи о копирайтинге, полезные советы и эксклюзивные материалы прямо на почту.
+                </p>
+                <div style="max-width: 400px; margin: 0 auto;">
+                    <form style="display: flex; gap: 1rem;">
+                        <input type="email" placeholder="Ваш email" class="form-input" style="flex: 1;">
+                        <button type="submit" class="btn btn-primary">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Услуги</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="services.html">Лендинги</a></li>
+                        <li><a href="services.html">Коммерческие предложения</a></li>
+                        <li><a href="services.html">SEO-статьи</a></li>
+                        <li><a href="services.html">Тексты для сайтов</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="about.html">Обо мне</a></li>
+                        <li><a href="portfolio.html">Портфолио</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="mailto:hello@copywriter.com">hello@copywriter.com</a></li>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li><a href="https://t.me/copywriter">Telegram</a></li>
+                        <li><a href="https://wa.me/1234567890">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Социальные сети</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Профессиональный копирайтер. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,188 +1,385 @@
----
-layout: default
-title: "Главная"
-description: "Создаю продающие тексты для лендингов, коммерческих предложений и контент-маркетинга"
----
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated title and meta to match original React version -->
+    <title>Копирайтинг и тексты для бизнеса | Профессиональный копирайтер</title>
+    <meta name="description" content="Профессиональный копирайтинг, прототипирование и тексты для бизнеса. Лендинги, коммерческие предложения, SEO-тексты и контент-маркетинг.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Updated navigation structure to match original React component -->
+    <header>
+        <nav>
+            <div class="logo">Копирайтер</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="services.html">Услуги и цены</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="about.html">Обо мне</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </nav>
+    </header>
 
-<!-- Hero Section -->
-<section class="hero section">
-    <div class="container">
-        <h1>Копирайтинг, прототипирование и тексты для бизнеса</h1>
-        <p class="hero-subtitle">
-            Создаю продающие тексты, которые привлекают клиентов и увеличивают продажи. Работаю с лендингами,
-            коммерческими предложениями и контентом для сайтов.
-        </p>
-        <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg">
-            Получить консультацию
-        </a>
-    </div>
-</section>
-
-<!-- When Need Copywriter Section -->
-<section class="section">
-    <div class="container">
-        <h2 class="text-center mb-8">Когда нужен копирайтер</h2>
-        <div class="grid grid-3">
-            <div class="card text-center">
-                <h3>Низкая конверсия</h3>
-                <p class="text-muted">
-                    Посетители заходят на сайт, но не покупают. Нужны тексты, которые убеждают и мотивируют к действию.
+    <!-- Updated hero section to match original React structure and content -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="text-balance">Копирайтинг, прототипирование и тексты для бизнеса</h1>
+                <p class="text-pretty">
+                    Создаю продающие тексты, которые привлекают клиентов и увеличивают конверсию. Работаю с лендингами,
+                    коммерческими предложениями и контент-маркетингом.
                 </p>
-            </div>
-            <div class="card text-center">
-                <h3>Нет времени на тексты</h3>
-                <p class="text-muted">
-                    Вы эксперт в своем деле, но написание текстов отнимает много времени. Доверьте это профессионалу.
-                </p>
-            </div>
-            <div class="card text-center">
-                <h3>Нужен экспертный контент</h3>
-                <p class="text-muted">
-                    Для привлечения аудитории нужны качественные статьи и материалы, которые покажут вашу экспертность.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- About Section -->
-<section class="section" style="background-color: var(--muted);">
-    <div class="container">
-        <div class="grid grid-2">
-            <div>
-                <h2>Привет! Я Анна</h2>
-                <p>
-                    Копирайтер с 5-летним опытом создания продающих текстов. Помогаю бизнесу увеличивать продажи 
-                    через качественный контент и грамотные коммерческие предложения.
-                </p>
-                <p>
-                    Работаю с компаниями из сферы IT, образования, красоты и здоровья. Знаю, как превратить 
-                    характеристики продукта в выгоды для клиента.
-                </p>
-                <a href="{{ '/about/' | relative_url }}" class="btn btn-secondary">
-                    Узнать больше
+                <a href="contact.html" class="btn btn-primary">
+                    Получить консультацию
+                    <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
                 </a>
             </div>
-            <div class="text-center">
-                <img src="/placeholder.svg?height=300&width=300" 
-                     alt="Анна - профессиональный копирайтер" 
-                     style="border-radius: var(--radius); max-width: 100%; height: auto;">
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Content Tasks Section -->
-<section class="section">
-    <div class="container">
-        <h2 class="text-center mb-8">Какие задачи решает контент</h2>
-        <div class="grid grid-2">
-            <div>
-                <h3>Для бизнеса</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 1rem;">✓ Увеличивает конверсию сайта</li>
-                    <li style="margin-bottom: 1rem;">✓ Привлекает целевую аудиторию</li>
-                    <li style="margin-bottom: 1rem;">✓ Повышает доверие к бренду</li>
-                    <li style="margin-bottom: 1rem;">✓ Улучшает позиции в поиске</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Для клиентов</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 1rem;">✓ Помогает принять решение</li>
-                    <li style="margin-bottom: 1rem;">✓ Отвечает на важные вопросы</li>
-                    <li style="margin-bottom: 1rem;">✓ Показывает выгоды продукта</li>
-                    <li style="margin-bottom: 1rem;">✓ Снижает сомнения в покупке</li>
-                </ul>
+    <!-- Updated "When You Need a Copywriter" section to match original React content -->
+    <section class="section section-muted">
+        <div class="container">
+            <h2 class="section-title">Когда нужен копирайтер</h2>
+            <div class="grid grid-3">
+                <div class="card text-center">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                    <div class="card-header">
+                        <h3 class="card-title">Не растут продажи</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Ваши тексты не убеждают клиентов покупать. Нужны продающие формулировки и правильная подача.</p>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                    </svg>
+                    <div class="card-header">
+                        <h3 class="card-title">Нужен новый сайт</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Запускаете проект и нужны качественные тексты для всех страниц сайта.</p>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <div class="card-header">
+                        <h3 class="card-title">Тексты не работают</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Существующий контент не приносит результат. Нужна переработка под целевую аудиторию.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Services Preview -->
-<section class="section" style="background-color: var(--muted);">
-    <div class="container">
-        <h2 class="text-center mb-8">Услуги</h2>
-        <div class="grid grid-2">
-            {% for service in site.services limit:4 %}
-            <div class="card">
-                <h3>{{ service.name }}</h3>
-                <p class="text-muted">{{ service.description }}</p>
-                <div class="flex justify-between items-center mt-4">
-                    <span class="text-primary font-weight-600">{{ service.price }}</span>
-                    <span class="text-muted">{{ service.deadline }}</span>
+    <!-- Updated About Me section to match original React structure -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center;">
+                <div>
+                    <img src="/professional-copywriter-portrait.png" alt="Профессиональный копирайтер" style="border-radius: 12px; box-shadow: var(--shadow-lg); width: 100%;">
+                </div>
+                <div>
+                    <h2>Обо мне</h2>
+                    <p>
+                        Профессиональный копирайтер с 5+ летним опытом создания продающих текстов. Специализируюсь на B2B
+                        сегменте и помогаю бизнесу увеличивать конверсию через качественный контент.
+                    </p>
+                    <div class="mb-3">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                            <svg class="icon-sm" style="color: var(--accent-primary); margin-right: 0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Более 200 успешных проектов</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                            <svg class="icon-sm" style="color: var(--accent-primary); margin-right: 0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Средний рост конверсии на 40%</span>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <svg class="icon-sm" style="color: var(--accent-primary); margin-right: 0.75rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Работа с крупными брендами</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            {% endfor %}
         </div>
-        <div class="text-center mt-8">
-            <a href="{{ '/services/' | relative_url }}" class="btn btn-primary">
-                Все услуги и цены
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Portfolio Preview -->
-<section class="section">
-    <div class="container">
-        <h2 class="text-center mb-8">Портфолио</h2>
-        <div class="grid grid-3">
-            <div class="card">
-                <h3>Лендинг IT-курсов</h3>
-                <p class="text-muted">Увеличил конверсию с 2% до 8% за счет фокуса на результатах обучения</p>
-                <div class="mt-4">
-                    <span class="badge">Лендинг</span>
-                    <span class="badge">Образование</span>
+    <!-- Updated "What Tasks Content Solves" section to match original React structure -->
+    <section class="section section-muted">
+        <div class="container">
+            <h2 class="section-title">Какие задачи решает контент</h2>
+            <div class="grid grid-6">
+                <div class="text-center">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                    </svg>
+                    <p style="font-weight: 500;">Привлекает клиентов</p>
                 </div>
-            </div>
-            <div class="card">
-                <h3>КП для веб-студии</h3>
-                <p class="text-muted">Помог закрыть 3 крупных проекта на общую сумму $50,000</p>
-                <div class="mt-4">
-                    <span class="badge">КП</span>
-                    <span class="badge">IT</span>
+                <div class="text-center">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                    <p style="font-weight: 500;">Повышает продажи</p>
                 </div>
-            </div>
-            <div class="card">
-                <h3>Контент для блога</h3>
-                <p class="text-muted">20 экспертных статей увеличили органический трафик на 150%</p>
-                <div class="mt-4">
-                    <span class="badge">Статьи</span>
-                    <span class="badge">SEO</span>
+                <div class="text-center">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                    <p style="font-weight: 500;">Усиливает доверие</p>
+                </div>
+                <div class="text-center">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+                    </svg>
+                    <p style="font-weight: 500;">Позиционирует бренд</p>
+                </div>
+                <div class="text-center">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                    <p style="font-weight: 500;">Улучшает коммуникацию</p>
+                </div>
+                <div class="text-center">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                    </svg>
+                    <p style="font-weight: 500;">Расширяет охват</p>
                 </div>
             </div>
         </div>
-        <div class="text-center mt-8">
-            <a href="{{ '/portfolio/' | relative_url }}" class="btn btn-secondary">
-                Смотреть все проекты
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Blog Preview -->
-<section class="section" style="background-color: var(--muted);">
-    <div class="container">
-        <h2 class="text-center mb-8">Полезные статьи</h2>
-        <div class="grid grid-3">
-            {% for post in site.posts limit:3 %}
-            <article class="card">
-                <h3>
-                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                </h3>
-                <p class="text-muted">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-                <div class="flex justify-between items-center mt-4">
-                    <time class="text-muted">{{ post.date | date: "%d.%m.%Y" }}</time>
-                    <a href="{{ post.url | relative_url }}" class="btn btn-sm">Читать</a>
+    <!-- Updated Services section to match original React structure -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Услуги копирайтера</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Лендинги</h3>
+                        <p class="card-description">Продающие одностраничники</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="mb-4">Создаю лендинги с высокой конверсией для товаров и услуг.</p>
+                        <a href="portfolio.html" class="btn btn-outline" style="width: 100%;">
+                            Смотреть примеры
+                            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-            </article>
-            {% endfor %}
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Коммерческие предложения</h3>
+                        <p class="card-description">КП, которые продают</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="mb-4">Структурированные предложения для B2B сегмента.</p>
+                        <a href="portfolio.html" class="btn btn-outline" style="width: 100%;">
+                            Смотреть примеры
+                            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">SEO-тексты</h3>
+                        <p class="card-description">Контент для поисковых систем</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="mb-4">Оптимизированные статьи для продвижения в Google и Яндекс.</p>
+                        <a href="portfolio.html" class="btn btn-outline" style="width: 100%;">
+                            Смотреть примеры
+                            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="text-center mt-8">
-            <a href="{{ '/blog/' | relative_url }}" class="btn btn-primary">
-                Все статьи
-            </a>
+    </section>
+
+    <!-- Updated Portfolio Preview section to match original React structure -->
+    <section class="section section-muted">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
+                <h2>Портфолио</h2>
+                <a href="portfolio.html" class="btn btn-outline">
+                    Смотреть все работы
+                    <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="badge badge-secondary w-fit mb-2">Лендинг</span>
+                        <h3 class="card-title">IT-консалтинг</h3>
+                        <p class="card-description">Увеличение конверсии на 65%</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Лендинг для IT-компании с фокусом на экспертность и результаты клиентов.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span class="badge badge-secondary w-fit mb-2">КП</span>
+                        <h3 class="card-title">Логистическая компания</h3>
+                        <p class="card-description">Рост откликов на 45%</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Коммерческое предложение с детальным описанием услуг и преимуществ.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span class="badge badge-secondary w-fit mb-2">Контент</span>
+                        <h3 class="card-title">Финтех-стартап</h3>
+                        <p class="card-description">Полный пакет текстов</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Тексты для всех страниц сайта финансового сервиса.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Updated Blog Preview section to match original React structure -->
+    <section class="section">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
+                <h2>Полезные статьи</h2>
+                <a href="blog.html" class="btn btn-outline">
+                    Все статьи
+                    <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title" style="font-size: 1.125rem;">Как написать продающий заголовок</h3>
+                        <p class="card-description">15 декабря 2024</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="mb-4">Разбираю формулы эффективных заголовков и показываю примеры из практики.</p>
+                        <a href="blog-post.html" class="btn btn-ghost">
+                            Читать статью
+                            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title" style="font-size: 1.125rem;">5 ошибок в коммерческих предложениях</h3>
+                        <p class="card-description">10 декабря 2024</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="mb-4">Частые ошибки, которые убивают эффективность КП и как их избежать.</p>
+                        <a href="blog-post.html" class="btn btn-ghost">
+                            Читать статью
+                            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title" style="font-size: 1.125rem;">SEO-копирайтинг в 2024</h3>
+                        <p class="card-description">5 декабря 2024</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="mb-4">Актуальные требования поисковых систем к текстовому контенту.</p>
+                        <a href="blog-post.html" class="btn btn-ghost">
+                            Читать статью
+                            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Footer to match original React structure -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Копирайтер</h3>
+                    <p>Профессиональные тексты для вашего бизнеса</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Услуги</h4>
+                    <ul>
+                        <li><a href="services.html">Лендинги</a></li>
+                        <li><a href="services.html">Коммерческие предложения</a></li>
+                        <li><a href="services.html">SEO-тексты</a></li>
+                        <li><a href="services.html">Контент-маркетинг</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="portfolio.html">Портфолио</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="about.html">Обо мне</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <div class="contact-info">
+                        <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <a href="mailto:hello@copywriter.ru">hello@copywriter.ru</a>
+                    </div>
+                    <div class="contact-info">
+                        <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                        </svg>
+                        <a href="https://t.me/copywriter">@copywriter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Копирайтер. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

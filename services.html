@@ -1,187 +1,307 @@
----
-layout: default
-title: "Услуги и цены"
-description: "Профессиональный копирайтинг для решения ваших бизнес-задач. Прозрачные цены, четкие сроки, гарантия качества."
----
-
-<!-- Header Section -->
-<section class="section">
-    <div class="container text-center">
-        <h1>Услуги и цены</h1>
-        <p class="hero-subtitle">
-            Профессиональный копирайтинг для решения ваших бизнес-задач. Прозрачные цены, четкие сроки, гарантия качества.
-        </p>
-    </div>
-</section>
-
-<!-- Process Cards -->
-<section class="section" style="background-color: var(--muted);">
-    <div class="container">
-        <h2 class="text-center mb-8">Сроки и процесс</h2>
-        <div class="grid grid-3">
-            <div class="card text-center">
-                <div class="process-icon">💬</div>
-                <h3>Ответ в течение 1 дня</h3>
-                <p class="text-muted">Быстрая обратная связь по вашему запросу</p>
-            </div>
-            <div class="card text-center">
-                <div class="process-icon">⏰</div>
-                <h3>Средний срок 4 дня</h3>
-                <p class="text-muted">Оптимальное время для качественного результата</p>
-            </div>
-            <div class="card text-center">
-                <div class="process-icon">📅</div>
-                <h3>График работы</h3>
-                <p class="text-muted">Пн-Пт 9:00-18:00, выходные по договоренности</p>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги и цены - Профессиональный копирайтер</title>
+    <meta name="description" content="Услуги копирайтера: лендинги, коммерческие предложения, SEO-статьи, тексты для сайтов. Прозрачные цены и быстрые сроки.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo">Копирайтер</a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="services.html" class="nav-link">Услуги</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Портфолио</a></li>
+                    <li><a href="blog.html" class="nav-link">Блог</a></li>
+                    <li><a href="about.html" class="nav-link">Обо мне</a></li>
+                    <li><a href="contact.html" class="nav-link">Контакты</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" id="mobileToggle">☰</button>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- Services List -->
-<section class="section">
-    <div class="container">
-        <h2 class="text-center mb-8">Список услуг</h2>
-        <div class="grid grid-3">
-            {% assign services_data = site.data.services | default: site.services %}
-            {% for service in services_data %}
-            <div class="card service-card">
-                <div class="service-header">
-                    <h3>{{ service.name }}</h3>
-                    <div class="flex justify-between items-center">
-                        <span class="service-price">{{ service.price }}</span>
-                        <span class="service-deadline">{{ service.deadline }}</span>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in-up">
+                <h1>Услуги и цены</h1>
+                <p class="hero-description">
+                    Прозрачное ценообразование и четкие сроки. Все услуги включают анализ целевой аудитории, 
+                    создание структуры и 2 раунда правок.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Info -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Сроки и процесс работы</h2>
+            <div class="grid grid-3">
+                <div class="card fade-in-up text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--accent-primary);">⚡</div>
+                    <h3>Ответ в течение дня</h3>
+                    <p>Отвечаю на все запросы в течение 24 часов. В Telegram обычно быстрее.</p>
                 </div>
-                <div class="service-content">
-                    <p class="text-muted mb-4">{{ service.description }}</p>
-                    {% if service.features %}
-                    <div class="service-features">
-                        <p class="features-title">Что входит:</p>
-                        <ul class="features-list">
-                            {% for feature in service.features %}
-                            <li>✓ {{ feature }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endif %}
+                <div class="card fade-in-up text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--accent-secondary);">📅</div>
+                    <h3>Средний срок 4 дня</h3>
+                    <p>Большинство проектов выполняю за 2-5 дней в зависимости от сложности.</p>
+                </div>
+                <div class="card fade-in-up text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--accent-tertiary);">🕐</div>
+                    <h3>График работы</h3>
+                    <p>Пн-Пт: 9:00-18:00 МСК. Выходные - только срочные проекты.</p>
                 </div>
             </div>
-            {% endfor %}
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- How I Work -->
-<section class="section" style="background-color: var(--muted);">
-    <div class="container">
-        <h2 class="text-center mb-8">Как я работаю</h2>
-        <div class="grid grid-3">
-            <div class="work-step text-center">
-                <div class="step-number">1</div>
-                <div class="step-icon">📝</div>
-                <h3>Бриф</h3>
-                <p class="text-muted">Заполняете подробный бриф о проекте и целях</p>
-            </div>
-            <div class="work-step text-center">
-                <div class="step-number">2</div>
-                <div class="step-icon">🔍</div>
-                <h3>Анализ</h3>
-                <p class="text-muted">Изучаю вашу нишу, конкурентов и целевую аудиторию</p>
-            </div>
-            <div class="work-step text-center">
-                <div class="step-number">3</div>
-                <div class="step-icon">📊</div>
-                <h3>Маркетинг</h3>
-                <p class="text-muted">Разрабатываю стратегию и ключевые сообщения</p>
-            </div>
-            <div class="work-step text-center">
-                <div class="step-number">4</div>
-                <div class="step-icon">🎨</div>
-                <h3>Макет</h3>
-                <p class="text-muted">Создаю структуру и план будущего текста</p>
-            </div>
-            <div class="work-step text-center">
-                <div class="step-number">5</div>
-                <div class="step-icon">✍️</div>
-                <h3>Написание</h3>
-                <p class="text-muted">Пишу текст согласно техническому заданию</p>
-            </div>
-            <div class="work-step text-center">
-                <div class="step-number">6</div>
-                <div class="step-icon">🔄</div>
-                <h3>Правки</h3>
-                <p class="text-muted">Вношу корректировки по вашим комментариям</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Form -->
-<section class="section">
-    <div class="container">
-        <div class="contact-form-wrapper">
-            <div class="text-center mb-8">
-                <h2>Готовы начать проект?</h2>
-                <p class="text-muted">Заполните форму, и я вышлю вам подробный бриф для работы</p>
-            </div>
-
-            <div class="card contact-form">
-                <form action="#" method="POST" class="form-grid">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Ваше имя *</label>
-                            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+    <!-- Services and Pricing -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Услуги с ценами</h2>
+            <div class="grid grid-2">
+                <div class="card fade-in-up">
+                    <h3>🚀 Лендинги</h3>
+                    <p>Продающие страницы с высокой конверсией. Анализ ЦА, структура, заголовки, призывы к действию.</p>
+                    <ul style="color: var(--text-secondary); margin: 1rem 0;">
+                        <li>Анализ конкурентов и ЦА</li>
+                        <li>Продающая структура</li>
+                        <li>Работа с возражениями</li>
+                        <li>CTA и формы</li>
+                    </ul>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+                        <div>
+                            <strong style="color: var(--accent-primary); font-size: 1.5rem;">от $200</strong>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        <div style="color: var(--text-muted);">3-5 дней</div>
+                    </div>
+                </div>
+
+                <div class="card fade-in-up">
+                    <h3>📄 Коммерческие предложения</h3>
+                    <p>КП, которые продают. Анализ потребностей клиента, выгоды, работа с возражениями.</p>
+                    <ul style="color: var(--text-secondary); margin: 1rem 0;">
+                        <li>Анализ потребностей</li>
+                        <li>Уникальное торговое предложение</li>
+                        <li>Обоснование цены</li>
+                        <li>Призыв к действию</li>
+                    </ul>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+                        <div>
+                            <strong style="color: var(--accent-primary); font-size: 1.5rem;">от $150</strong>
                         </div>
+                        <div style="color: var(--text-muted);">2-3 дня</div>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="company">Компания</label>
-                        <input type="text" id="company" name="company" placeholder="Название компании">
+                <div class="card fade-in-up">
+                    <h3>📝 SEO-статьи</h3>
+                    <p>Информационные и продающие статьи для привлечения трафика из поисковых систем.</p>
+                    <ul style="color: var(--text-secondary); margin: 1rem 0;">
+                        <li>Сбор семантики</li>
+                        <li>Структура и план</li>
+                        <li>Естественное вхождение ключей</li>
+                        <li>Мета-теги</li>
+                    </ul>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+                        <div>
+                            <strong style="color: var(--accent-primary); font-size: 1.5rem;">от $80</strong>
+                        </div>
+                        <div style="color: var(--text-muted);">2-4 дня</div>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="service">Интересующая услуга *</label>
-                        <select id="service" name="service" required>
-                            <option value="">Выберите услугу</option>
-                            <option value="landing">Лендинг</option>
-                            <option value="commercial">Коммерческое предложение</option>
-                            <option value="seo">SEO-статья</option>
-                            <option value="main">Тексты на главную</option>
-                            <option value="services">Тексты об услугах</option>
-                            <option value="about">О компании</option>
-                        </select>
+                <div class="card fade-in-up">
+                    <h3>🏠 Тексты для главной</h3>
+                    <p>Тексты для главной страницы сайта. Презентация компании, услуг, преимуществ.</p>
+                    <ul style="color: var(--text-secondary); margin: 1rem 0;">
+                        <li>Анализ бизнеса</li>
+                        <li>Позиционирование</li>
+                        <li>Блоки и разделы</li>
+                        <li>Призывы к действию</li>
+                    </ul>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+                        <div>
+                            <strong style="color: var(--accent-primary); font-size: 1.5rem;">от $120</strong>
+                        </div>
+                        <div style="color: var(--text-muted);">2-3 дня</div>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="budget">Бюджет</label>
-                        <select id="budget" name="budget">
-                            <option value="">Выберите бюджет</option>
-                            <option value="50-100">$50-100</option>
-                            <option value="100-250">$100-250</option>
-                            <option value="250-500">$250-500</option>
-                            <option value="500+">$500+</option>
-                        </select>
+                <div class="card fade-in-up">
+                    <h3>⚙️ Тексты услуг</h3>
+                    <p>Описания услуг и товаров. Выгоды, особенности, техническая информация.</p>
+                    <ul style="color: var(--text-secondary); margin: 1rem 0;">
+                        <li>Анализ услуги/товара</li>
+                        <li>Выгоды для клиента</li>
+                        <li>Техническая информация</li>
+                        <li>Мотивация к покупке</li>
+                    </ul>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+                        <div>
+                            <strong style="color: var(--accent-primary); font-size: 1.5rem;">от $60</strong>
+                        </div>
+                        <div style="color: var(--text-muted);">1-2 дня</div>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="message">Описание проекта *</label>
-                        <textarea id="message" name="message" placeholder="Расскажите о вашем проекте, целях и требованиях..." rows="4" required></textarea>
+                <div class="card fade-in-up">
+                    <h3>🏢 О компании</h3>
+                    <p>Тексты о компании, которые формируют доверие и показывают экспертность.</p>
+                    <ul style="color: var(--text-secondary); margin: 1rem 0;">
+                        <li>История компании</li>
+                        <li>Миссия и ценности</li>
+                        <li>Команда и достижения</li>
+                        <li>Социальные доказательства</li>
+                    </ul>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+                        <div>
+                            <strong style="color: var(--accent-primary); font-size: 1.5rem;">от $100</strong>
+                        </div>
+                        <div style="color: var(--text-muted);">2-3 дня</div>
                     </div>
-
-                    <button type="submit" class="btn btn-primary btn-lg form-submit">
-                        Выслать бриф
-                    </button>
-
-                    <p class="form-disclaimer">
-                        Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
-                    </p>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- How I Work -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Как я работаю</h2>
+            <div class="grid grid-3">
+                <div class="card fade-in-up text-center">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent-primary);">1</div>
+                    <h3>Бриф</h3>
+                    <p>Изучаю техническое задание, задаю уточняющие вопросы, анализирую целевую аудиторию.</p>
+                </div>
+                <div class="card fade-in-up text-center">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent-primary);">2</div>
+                    <h3>Анализ</h3>
+                    <p>Исследую рынок, конкурентов, особенности ниши. Определяю боли и потребности ЦА.</p>
+                </div>
+                <div class="card fade-in-up text-center">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent-primary);">3</div>
+                    <h3>Маркетинг</h3>
+                    <p>Разрабатываю маркетинговую концепцию, УТП, позиционирование и ключевые сообщения.</p>
+                </div>
+                <div class="card fade-in-up text-center">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent-secondary);">4</div>
+                    <h3>Структура</h3>
+                    <p>Создаю логичную структуру текста, план разделов, последовательность аргументов.</p>
+                </div>
+                <div class="card fade-in-up text-center">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent-secondary);">5</div>
+                    <h3>Написание</h3>
+                    <p>Пишу текст, следуя структуре. Использую проверенные техники и принципы копирайтинга.</p>
+                </div>
+                <div class="card fade-in-up text-center">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent-secondary);">6</div>
+                    <h3>Правки</h3>
+                    <p>Вношу правки по вашим комментариям. В стоимость включено 2 раунда корректировок.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Form -->
+    <section class="section" style="background: var(--card-bg);">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2>Отправить бриф</h2>
+                <p>Опишите ваш проект, и я пришлю предложение с точной стоимостью и сроками</p>
+            </div>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div class="card">
+                    <form id="briefForm">
+                        <div class="form-group">
+                            <label for="projectType" class="form-label">Тип проекта *</label>
+                            <select id="projectType" name="projectType" class="form-input" required>
+                                <option value="">Выберите тип проекта</option>
+                                <option value="landing">Лендинг</option>
+                                <option value="commercial">Коммерческое предложение</option>
+                                <option value="article">SEO-статья</option>
+                                <option value="homepage">Тексты для главной</option>
+                                <option value="services">Тексты услуг</option>
+                                <option value="about">О компании</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="briefDescription" class="form-label">Описание проекта *</label>
+                            <textarea id="briefDescription" name="briefDescription" class="form-textarea" rows="4" required placeholder="Опишите ваш проект, цели, целевую аудиторию..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactInfo" class="form-label">Контактная информация *</label>
+                            <input type="text" id="contactInfo" name="contactInfo" class="form-input" required placeholder="Email или Telegram для связи">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Отправить бриф
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Услуги</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="services.html">Лендинги</a></li>
+                        <li><a href="services.html">Коммерческие предложения</a></li>
+                        <li><a href="services.html">SEO-статьи</a></li>
+                        <li><a href="services.html">Тексты для сайтов</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="about.html">Обо мне</a></li>
+                        <li><a href="portfolio.html">Портфолио</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="mailto:hello@copywriter.com">hello@copywriter.com</a></li>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li><a href="https://t.me/copywriter">Telegram</a></li>
+                        <li><a href="https://wa.me/1234567890">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Социальные сети</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Профессиональный копирайтер. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
