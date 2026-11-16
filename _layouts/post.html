@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<section class="article-header">
+    <div class="container">
+        <div class="article-breadcrumbs">
+            <a href="{{ '/' | relative_url }}">Главная</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="{{ '/blog/' | relative_url }}">Блог</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>{{ page.category }}</span>
+        </div>
+        <span class="article-category-badge">
+            <i class="fas fa-shield-halved"></i> {{ page.category }}
+        </span>
+        <h1 class="article-title">{{ page.title }}</h1>
+        <div class="article-meta">
+            <span><i class="far fa-calendar"></i> {{ page.date | date: "%-d %B %Y" }}</span>
+            <span><i class="far fa-clock"></i> {{ page.reading_time | default: 8 }} мин чтения</span>
+            <span><i class="far fa-eye"></i> {{ page.views | default: 0 }} просмотров</span>
+            <span><i class="fas fa-user"></i> {{ site.author }}</span>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="article-layout">
+        <main>
+            <article class="article-content animate-on-scroll">
+                {% if page.cover %}
+                <div class="article-hero-image">
+                    <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}">
+                </div>
+                {% endif %}
+                <div class="article-body">
+                    {{ content }}
+                </div>
+                <div class="article-tags-bottom">
+                    {% for tag in page.tags %}<span>{{ tag }}</span>{% endfor %}
+                </div>
+            </article>
+
+            <div class="author-box animate-on-scroll">
+                <div class="author-avatar">ДГ</div>
+                <div class="author-info">
+                    <h4>{{ site.author }}</h4>
+                    <p>
+                        Фронтенд/бэкенд разработчик с 15-летним опытом. Спасаю сайты после взломов, дорабатываю на
+                        WordPress, 1C-Bitrix и редких CMS. Активно использую ИИ-агентов в работе.
+                        <a href="{{ '/#contact' | relative_url }}">Связаться →</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        {% include sidebar.html %}
+    </div>
+</div>

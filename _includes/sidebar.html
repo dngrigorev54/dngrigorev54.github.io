@@ -1,0 +1,30 @@
+<aside class="sidebar animate-on-scroll delay-2">
+    <div class="sidebar-widget">
+        <h4><i class="fas fa-folder"></i> Категории</h4>
+        <ul class="category-list">
+            <li><a href="{{ '/blog/' | relative_url }}" class="active">Все статьи <span class="count">{{ site.posts.size
+                        }}</span></a></li>
+            {% assign categories = site.posts | map: 'category' | uniq %}
+            {% for cat in categories %}
+            {% assign cat_count = site.posts | where: 'category', cat | size %}
+            <li><a href="#">{{ cat }} <span class="count">{{ cat_count }}</span></a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="sidebar-widget">
+        <h4><i class="fas fa-tags"></i> Метки</h4>
+        <div class="tag-cloud">
+            {% assign all_tags = site.posts | map: 'tags' | join: ',' | split: ',' | uniq %}
+            {% for tag in all_tags %}
+            <a href="#">{{ tag }}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="sidebar-cta">
+        <h4><i class="fas fa-stethoscope me-2" style="color: var(--orange);"></i> Проблема с сайтом?</h4>
+        <p>Бесплатная диагностика — посмотрю и назову точную цену без обязательств.</p>
+        <a href="{{ '/#contact' | relative_url }}" class="btn"><i class="fas fa-paper-plane"></i> Обсудить проект</a>
+    </div>
+</aside>
