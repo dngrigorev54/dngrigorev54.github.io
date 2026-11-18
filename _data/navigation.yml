@@ -16,5 +16,5 @@ main:
   - title: "FAQ"
     url: "/#faq"
   - title: "Блог"
-    url: "/blog/"
-    icon: "fa-pen-nib"
+    # url: "/blog/"
+    # icon: "fa-pen-nib"
