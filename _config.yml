@@ -27,5 +27,9 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate
+
+paginate: 6          # сколько статей на странице (у вас 6 видимых)
+paginate_path: "/blog/page:num/"
 
 # Навигация (вынесено в data-файл ниже, но можно и здесь)

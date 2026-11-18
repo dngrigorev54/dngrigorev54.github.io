@@ -339,6 +339,15 @@
     if (loadMoreBtn && postsContainer) {
         const morePosts = [
             {
+                category: 'Вирусы на сайте',
+                image: '/assets/img/posts/how_one_hosting.webp',
+                title: 'Как один аккаунт хостинга «положил» десять сайтов: история о массовом заражении и жёстком уроке безопасности',
+                date: '18 ноября 2026',
+                readTime: '5 мин',
+                //views: '632',
+                tags: ['WordPress', '1С-Bitrix', 'Elementor']
+            },
+            {
                 category: 'WordPress',
                 image: 'https://via.placeholder.com/800x400/ff7a1a/0a0a0a?text=WordPress+ACF',
                 title: 'ACF + Elementor: как сделать удобное управление контентом для клиента',
@@ -424,4 +433,5 @@
             }, 700);
         });
     }
+
 })();
