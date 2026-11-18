@@ -20,11 +20,11 @@ description: "Статьи о разработке, спасении сайто�
             <div id="posts-container">
                 {% for post in site.posts %}
                 <article class="post-card animate-on-scroll">
-                    <!-- <div class="post-card-image">
+                    <div class="post-card-image">
                         <span class="post-card-category">{{ post.category }}</span>
                         <img src="{{ post.cover | default: '/img/placeholder.webp' | relative_url }}"
                             alt="{{ post.title }}">
-                    </div> -->
+                    </div>
                     <div class="post-card-body">
                         <div class="post-card-meta">
                             <span><i class="far fa-calendar"></i> {{ post.date | date: "%-d %B %Y" }}</span>
