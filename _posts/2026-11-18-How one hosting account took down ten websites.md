@@ -5,7 +5,7 @@ date: 2026-11-18 10:00:00 +0300
 categories: [security, hosting, webdev]
 tags: [безопасность, хостинг, bitrix, wordpress, htaccess, бэкапы, инцидент]
 author: "Ваше Имя"
-cover: /assets/img/posts/how_one_hosting.webp
+# cover: /assets/img/posts/how_one_hosting.webp
 image_alt: "Десять сайтов на одном хостинге вышли из строя: массовое заражение и восстановление"
 description: "Реальная история из практики: десять сайтов на разных CMS на одном аккаунте виртуального хостинга одновременно вышли из строя. Диагностика, поиск вредоносных файлов, чистка и выводы о безопасности."
 ---
