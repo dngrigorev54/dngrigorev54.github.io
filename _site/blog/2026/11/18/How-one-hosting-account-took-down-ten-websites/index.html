@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как один аккаунт хостинга «положил» десять сайтов: история о массовом заражении и жёстком уроке безопасности · Дмитрий Григорьев · Разработка и спасение сайтов</title>
+    <meta name="keywords"
+        content="Дмитрий Григорьев, фронтенд разработчик, веб-разработчик Новосибирск, создание сайтов, разработка лэндингов, доработка сайтов, спасение сайтов после взлома, лечение сайтов от вирусов, WordPress разработчик, Tilda разработчик, MODx разработчик, Moguta разработчик, вёрстка сайтов, адаптивная вёрстка, кроссбраузерная вёрстка, HTML CSS JavaScript, PHP разработчик, SEO оптимизация, настройка бэкапов, восстановление сайта, самозанятый разработчик, ИИ-агенты в разработке, разработка под ключ, поддержка сайтов, Новосибирск веб-разработка">
+    <meta name="description" content="Реальная история из практики: десять сайтов на разных CMS на одном аккаунте виртуального хостинга одновременно вышли из строя. Диагностика, поиск вредоносных файлов, чистка и выводы о безопасности.">
+    <meta name="author" content="Дмитрий Григорьев">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Как один аккаунт хостинга «положил» десять сайтов: история о массовом заражении и жёстком уроке безопасности">
+    <meta property="og:description" content="Реальная история из практики: десять сайтов на разных CMS на одном аккаунте виртуального хостинга одновременно вышли из строя. Диагностика, поиск вредоносных файлов, чистка и выводы о безопасности.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://localhost:4000/blog/2026/11/18/How-one-hosting-account-took-down-ten-websites/">
+    <meta property="og:locale" content="ru_RU">
+
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Begin Jekyll SEO tag v2.9.1 -->
+<title>Как один аккаунт хостинга «положил» десять сайтов: история о массовом заражении и жёстком уроке безопасности | Дмитрий Григорьев · Разработка и спасение сайтов</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Как один аккаунт хостинга «положил» десять сайтов: история о массовом заражении и жёстком уроке безопасности" />
+<meta name="author" content="Ваше Имя" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Реальная история из практики: десять сайтов на разных CMS на одном аккаунте виртуального хостинга одновременно вышли из строя. Диагностика, поиск вредоносных файлов, чистка и выводы о безопасности." />
+<meta name="twitter:description" property="og:description" content="Реальная история из практики: десять сайтов на разных CMS на одном аккаунте виртуального хостинга одновременно вышли из строя. Диагностика, поиск вредоносных файлов, чистка и выводы о безопасности." />
+<link rel="canonical" href="http://localhost:4000/blog/2026/11/18/How-one-hosting-account-took-down-ten-websites/" />
+<meta property="og:url" content="http://localhost:4000/blog/2026/11/18/How-one-hosting-account-took-down-ten-websites/" />
+<meta property="og:site_name" content="Дмитрий Григорьев · Разработка и спасение сайтов" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-18T14:00:00+07:00" />
+<meta property="article:modified_time" content="2026-11-18T14:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Как один аккаунт хостинга «положил» десять сайтов: история о массовом заражении и жёстком уроке безопасности" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ваше Имя"},"dateModified":"2026-11-18T14:00:00+07:00","datePublished":"2026-11-18T14:00:00+07:00","description":"Реальная история из практики: десять сайтов на разных CMS на одном аккаунте виртуального хостинга одновременно вышли из строя. Диагностика, поиск вредоносных файлов, чистка и выводы о безопасности.","headline":"Как один аккаунт хостинга «положил» десять сайтов: история о массовом заражении и жёстком уроке безопасности","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2026/11/18/How-one-hosting-account-took-down-ten-websites/"},"url":"http://localhost:4000/blog/2026/11/18/How-one-hosting-account-took-down-ten-websites/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Дмитрий Григорьев · Разработка и спасение сайтов" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
+    <div class="container">
+        <a class="navbar-brand " href="/">
+            
+            Дмитрий <span>Григорьев</span>
+            
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+            aria-label="Меню">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navContent">
+            <ul class="navbar-nav align-items-lg-center">
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/#pains">
+                        Услуги
+                    </a>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/#process">
+                        Процесс
+                    </a>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/#holding">
+                        Опыт
+                    </a>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/#cases">
+                        Кейсы
+                    </a>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/#prices">
+                        Цены
+                    </a>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/#certs">
+                        Сертификаты
+                    </a>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/#faq">
+                        FAQ
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link navbar-cta" href="/#contact">
+                        <i class="fas fa-paper-plane"></i> Обсудить проект
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="article-header">
+    <div class="container">
+        <div class="article-breadcrumbs">
+            <a href="/">Главная</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="/blog/">Блог</a>
+            <i class="fas fa-chevron-right"></i>
+            <span></span>
+        </div>
+        <span class="article-category-badge">
+            <i class="fas fa-shield-halved"></i> 
+        </span>
+        <h1 class="article-title">Как один аккаунт хостинга «положил» десять сайтов: история о массовом заражении и жёстком уроке безопасности</h1>
+        <div class="article-meta">
+            <span><i class="far fa-calendar"></i> 18 November 2026</span>
+            <span><i class="far fa-clock"></i> 8 мин чтения</span>
+            <span><i class="far fa-eye"></i> 0 просмотров</span>
+            <span><i class="fas fa-user"></i> Дмитрий Григорьев</span>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="article-layout">
+        <main>
+            <article class="article-content animate-on-scroll">
+                
+                <div class="article-body">
+                    <p><img src="/assets/img/posts/how_one_hosting.webp" alt="Обложка статьи: массовое заражение сайтов на одном хостинге" />
+<em>Представьте: утро, кофе, вы открываете браузер, чтобы проверить, как работают ваши проекты, а там — белый экран, ошибки 500, а часть страниц вообще отказывается грузиться. Знакомо?</em></p>
+
+<p><strong>Представьте: утро, кофе, вы открываете браузер, чтобы проверить, как работают ваши проекты, а там — белый экран, ошибки 500, а часть страниц вообще отказывается грузиться. Знакомо? Вот и у меня было примерно так. Только сайтов было десять, и все они «легли» одновременно.</strong></p>
+
+<p>Сегодня я хочу рассказать историю из личной практики, которая наглядно показывает, почему экономия на изоляции проектов и пренебрежение базовой гигиеной безопасности могут обернуться настоящей головной болью. Эта история — про крупный холдинг, десяток сайтов на разных CMS, один виртуальный хостинг и один очень неприятный день.</p>
+
+<!--more-->
+
+<h2 id="контекст-десять-сайтов-на-одном-аккаунте">Контекст: десять сайтов на одном аккаунте</h2>
+
+<p>Когда я работал в крупном холдинге, в моей зоне ответственности находилось около десяти сайтов. Это были совершенно разные проекты: часть на 1С-Битрикс, часть на WordPress, были и другие «движки». Среди них — пара сайтов отелей, на которых была внедрена система бронирования номеров. То есть речь шла не просто о визитках, а о ресурсах с реальными бизнес-процессами и потенциально чувствительными данными.</p>
+
+<p>Я занимался всем понемногу: доработкой функционала, исправлением ошибок, SEO-оптимизацией, наполнением контентом и так далее. Классическая ситуация для небольших команд, когда один специалист закрывает широкий спектр задач.</p>
+
+<p>И вот что объединяло все эти сайты — они размещались на <strong>одном аккаунте виртуального хостинга</strong>. Тогда это казалось удобным и экономным решением: одна панель управления, один биллинг, одна точка входа. О том, чем это может обернуться, я узнал позже.</p>
+
+<h2 id="день-когда-всё-пошло-не-так">День, когда всё пошло не так</h2>
+
+<p>В один далеко не прекрасный день все сайты начали тормозить, выдавать ошибки, а некоторые страницы просто перестали открываться. Причём проблема была не локальной — она затронула весь аккаунт разом. Первая мысль — сбой на стороне хостинга. Я обратился в техподдержку, но внятных рекомендаций не получил: мол, проверяйте сайты, ищите причину.</p>
+
+<p>Восстановление из резервных копий на хостинге не помогало. Бэкапы откатывались, но проблема возвращалась — или, что ещё хуже, не исчезала вовсе. Это был тревожный звоночек: значит, дело не в случайном сбое, а в чём-то более системном.</p>
+
+<p>Честно скажу: был шок. Когда у тебя десять проектов, за которые ты отвечаешь, и все они одновременно «умирают», а техподдержка разводит руками — поначалу не знаешь, в какую сторону копать. Но эмоции — плохой помощник в диагностике. Взяв себя в руки, я начал системно анализировать ситуацию.</p>
+
+<h2 id="диагностика-шаг-за-шагом">Диагностика: шаг за шагом</h2>
+
+<p>Первым делом я решил посмотреть на структуру сайтов целиком, а не по отдельности. Скачал бэкапы на локальный хост, развернул их и приступил к поиску вредоносных файлов. Это был методичный, почти детективный процесс.</p>
+
+<p>И вот что я обнаружил: на <strong>всех</strong> сайтах появились дополнительные папки и PHP-файлы с явно странным кодом. Причём в большинстве папок лежал пустой файл <code class="language-plaintext highlighter-rouge">.htaccess</code>. Для тех, кто не в теме: <code class="language-plaintext highlighter-rouge">.htaccess</code> — это конфигурационный файл Apache, который управляет поведением сервера в конкретной директории. Пустой файл там, где его быть не должно, — это классический след взломщика: так злоумышленники пытаются обойти существующие правила и скрыть своё присутствие, не привлекая внимания.</p>
+
+<p>Сам процесс восстановления выглядел так: я скачивал бэкап заражённого сайта на локальный ПК, разворачивал его, вычищал от вредоносных файлов, тестировал работоспособность и только после этого заливал обратно на хостинг. И так — по каждому из десяти сайтов.</p>
+
+<h2 id="почему-это-заняло-много-времени-и-почему-так-бывает-всегда">Почему это заняло много времени (и почему так бывает всегда)</h2>
+
+<p>На эту работу ушло немало времени, и это нормально. Когда речь идёт о чистке после компрометации, нельзя просто «удалить подозрительные файлы и забыть». Нужно:</p>
+
+<ul>
+  <li><strong>Найти все точки заражения.</strong> Вредоносный код может быть разбросан по десяткам директорий, замаскирован под легитимные файлы или внедрён в существующие скрипты.</li>
+  <li><strong>Проверить целостность каждой CMS.</strong> После взлома ядро и плагины могут быть модифицированы, поэтому важно сверить файлы с эталонными версиями.</li>
+  <li><strong>Протестировать функционал.</strong> Особенно критично для сайтов отелей с системой бронирования: если после чистки «отвалится» форма брони, бизнес потеряет деньги.</li>
+  <li><strong>Убедиться, что «дыра», через которую проникли злоумышленники, закрыта.</strong> Иначе всё повторится.</li>
+</ul>
+
+<h2 id="развязка-и-выводы">Развязка и выводы</h2>
+
+<p>Я справился. После окончания чистки рабочие сайты были залиты обратно на хостинг. Но на этом история не закончилась — на общем собрании с руководителем было принято решение о <strong>переносе каждого сайта на отдельный аккаунт хостинга</strong> в целях безопасности. Кроме того, на хостинге была приобретена дополнительная услуга — антивирусная защита.</p>
+
+<p>И это правильные решения. Вот какие выводы я сделал для себя (и рекомендую всем, кто держит несколько проектов):</p>
+
+<ol>
+  <li><strong>Изоляция проектов — это не роскошь, а необходимость.</strong> Один аккаунт на десять сайтов — это единая точка отказа. Взлом одного проекта автоматически ставит под угрозу все остальные, как и произошло в моём случае.</li>
+  <li><strong>Регулярные и проверенные бэкапы.</strong> Важно не просто иметь копии, а уметь их разворачивать и проверять. В моей ситуации бэкапы с хостинга не решали проблему — потому что они тоже содержали заражённые файлы.</li>
+  <li><strong>Антивирусная защита и мониторинг.</strong> Не стоит пренебрегать дополнительными сервисами безопасности, особенно если на сайте есть чувствительные данные (бронирования, персональная информация).</li>
+  <li><strong>Не паниковать.</strong> Диагностика по шагам, анализ структуры, поиск аномалий — это работает лучше, чем хаотичные попытки «починить всё сразу».</li>
+</ol>
+
+<p><strong>А вы сталкивались с массовым заражением сайтов на одном хостинге? Как выявляли причину и что помогло? Делитесь опытом в комментариях — уверен, эта тема близка многим.</strong></p>
+
+<hr />
+
+<p><em>Если материал оказался полезным — сохраняйте пост, делитесь с коллегами и подписывайтесь, чтобы не пропустить разборы реальных инцидентов и практические советы по безопасности веб-проектов.</em></p>
+
+                </div>
+                <div class="article-tags-bottom">
+                    <span>безопасность</span><span>хостинг</span><span>bitrix</span><span>wordpress</span><span>htaccess</span><span>бэкапы</span><span>инцидент</span>
+                </div>
+            </article>
+
+            <div class="author-box animate-on-scroll">
+                <div class="author-avatar">ДГ</div>
+                <div class="author-info">
+                    <h4>Дмитрий Григорьев</h4>
+                    <p>
+                        Фронтенд/бэкенд разработчик с 15-летним опытом. Спасаю сайты после взломов, дорабатываю на
+                        WordPress, 1C-Bitrix и редких CMS. Активно использую ИИ-агентов в работе.
+                        <a href="/#contact">Связаться →</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar animate-on-scroll delay-2">
+    <div class="sidebar-widget">
+        <h4><i class="fas fa-folder"></i> Категории</h4>
+        <ul class="category-list">
+            <li><a href="/blog/" class="active">Все статьи <span class="count">1</span></a></li>
+            
+            
+            
+            <li><a href="#"> <span class="count">1</span></a></li>
+            
+        </ul>
+    </div>
+
+    <div class="sidebar-widget">
+        <h4><i class="fas fa-tags"></i> Метки</h4>
+        <div class="tag-cloud">
+            
+            
+            <a href="#">безопасность</a>
+            
+            <a href="#">хостинг</a>
+            
+            <a href="#">bitrix</a>
+            
+            <a href="#">wordpress</a>
+            
+            <a href="#">htaccess</a>
+            
+            <a href="#">бэкапы</a>
+            
+            <a href="#">инцидент</a>
+            
+        </div>
+    </div>
+
+    <div class="sidebar-cta">
+        <h4><i class="fas fa-stethoscope me-2" style="color: var(--orange);"></i> Проблема с сайтом?</h4>
+        <p>Бесплатная диагностика — посмотрю и назову точную цену без обязательств.</p>
+        <a href="/#contact" class="btn"><i class="fas fa-paper-plane"></i> Обсудить проект</a>
+    </div>
+</aside>
+    </div>
+</div>
+    <footer class="text-center">
+    <div class="container">
+        <p class="mb-0">
+            © 2026 <a href="/">С оранжевым настроением Дмитрий Григорьев</a>.
+            <span style="opacity: 0.5; font-size: 0.82rem; display: block; margin-top: 0.4rem;">
+                Сделано с <i class="fas fa-heart"></i> на Jekyll
+            </span>
+        </p>
+    </div>
+</footer>
+    <div class="mobile-cta">
+    <a href="https://t.me/fiba_music" target="_blank" class="m-tg"><i class="fab fa-telegram me-1"></i> Telegram</a>
+
+    <a href="https://web.max.ru/65509464" target="_blank" class="m-tg">
+        <img src="img/max.png" width="16" height="16"> MAX</a>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
