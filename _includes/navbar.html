@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
+    <div class="container">
+        <a class="navbar-brand {% if page.url == '/' %}brand-stacked{% endif %}" href="{{ '/' | relative_url }}">
+            {% if page.url == '/' %}
+            <span class="brand-name">Дмитрий <span>Григорьев</span></span>
+            <span class="brand-status-line">Самозанятый · работаю по договору</span>
+            {% else %}
+            Дмитрий <span>Григорьев</span>
+            {% endif %}
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+            aria-label="Меню">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navContent">
+            <ul class="navbar-nav align-items-lg-center">
+                {% for item in site.data.navigation.main %}
+                {% assign is_active = false %}
+                {% if item.url == page.url or (item.url == '/blog/' and page.layout == 'post') or (item.url == '/blog/'
+                and page.url == '/blog/') %}
+                {% assign is_active = true %}
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link{% if is_active %} active{% endif %}" href="{{ item.url | relative_url }}">
+                        {% if item.icon %}<i class="fas {{ item.icon }} me-1"></i>{% endif %}{{ item.title }}
+                    </a>
+                </li>
+                {% endfor %}
+                <li class="nav-item">
+                    <a class="nav-link navbar-cta" href="{{ '/#contact' | relative_url }}">
+                        <i class="fas fa-paper-plane"></i> Обсудить проект
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
